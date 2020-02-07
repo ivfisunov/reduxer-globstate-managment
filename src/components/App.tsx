@@ -1,9 +1,18 @@
-/* eslint-disable react/prefer-stateless-function */
-import * as React from "react";
+import React from 'react';
+import { Provider, createStore } from '../reduxer';
+import { reducer } from '../reducer';
+import Todo from './Todo';
 
-class App extends React.Component<{}, {}> {
+const store = createStore(reducer, []);
+
+class App extends React.Component {
   render(): JSX.Element {
-    return <h1>Hello!</h1>;
+    return (
+      <Provider store={store}>
+        <h1>Hi there</h1>
+        <Todo />
+      </Provider>
+    );
   }
 }
 

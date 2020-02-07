@@ -1,21 +1,21 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  devtool: "inline-source-map",
-  entry: "./src/index.tsx",
+  mode: 'development',
+  devtool: 'inline-source-map',
+  entry: './src/index.tsx',
   output: {
-    path: path.join(__dirname, "./dist"),
-    filename: "index.js"
+    path: path.join(__dirname, './dist'),
+    filename: 'index.js'
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"]
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/index.html"
+      template: 'src/index.html'
     })
   ],
   module: {
@@ -23,11 +23,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: 'babel-loader'
       },
       {
         test: /\.tsx?$/,
-        use: "awesome-typescript-loader"
+        use: 'awesome-typescript-loader'
       }
     ]
   }

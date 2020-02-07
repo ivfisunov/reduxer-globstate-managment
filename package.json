@@ -2,7 +2,6 @@
   "name": "reduxer-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "watch": "npx webpack --mode development --watch",
     "build": "npx webpack --mode production",
@@ -30,6 +29,7 @@
     "webpack-dev-server": "^3.10.2"
   },
   "devDependencies": {
+    "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.19",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",

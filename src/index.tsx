@@ -1,8 +1,5 @@
-// import * as React from "react";
-// import * as ReactDom from "react-dom";
-// import App from "./components/App";
-const React = require("react");
-const ReactDom = require("react-dom");
-const App = require("./components/App").default;
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './components/App';
 
-ReactDom.render(<App />, document.getElementById("root"));
+ReactDom.render(<App />, document.getElementById('root'));
